@@ -4,6 +4,7 @@
  * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+@import url("https://fonts.googleapis.com/css?family=Muli:400,600,700,800,900&amp;subset=vietnamese");
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -6313,7 +6314,7 @@ a.text-dark:hover, a.text-dark:focus {
     border-color: #dee2e6; } }
 
 html, body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Muli', sans-serif;
   font-size: 14px;
   height: 100%;
   width: 100%; }
@@ -6322,21 +6323,95 @@ html, body {
   .container {
     width: auto; } }
 
-header .navbar {
+.slider {
+  background: #333;
+  height: 400px;
+  width: 100%; }
+
+#logo {
+  background: #ccc;
+  width: 150px;
+  height: 70px; }
+
+.navbar-toggler {
+  margin-top: 15px; }
+
+@media screen and (min-width: 992px) {
+  .navbar {
+    height: 130px; }
+  width: 260px;
+  height: 120px;
+  position: relative;
+  bottom: -20px;
+  .navbar-light .navbar-nav .nav-link {
+    padding-right: 75px; } }
+
+#nav-left {
+  padding-left: 30px; }
+
+footer .menu-footer {
+  background: #233441;
+  padding-top: 2rem;
   padding-right: 0;
+  padding-bottom: 2rem;
   padding-left: 0; }
+  @media (min-width: 768px) {
+    footer .menu-footer {
+      padding-top: 4rem;
+      padding-right: 0;
+      padding-bottom: 4rem;
+      padding-left: 0; } }
+  footer .menu-footer h2 {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 900;
+    margin-bottom: .9rem; }
+  footer .menu-footer .info .logo img {
+    margin-right: 0; }
+    @media (min-width: 768px) {
+      footer .menu-footer .info .logo img {
+        margin-right: 2.8rem; } }
+  footer .menu-footer .info .text p {
+    color: white;
+    font-size: 0.95rem;
+    opacity: .3; }
+  footer .menu-footer .info .text ul {
+    margin: 0; }
+    footer .menu-footer .info .text ul a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 2rem;
+      height: 2rem;
+      text-decoration: none; }
+      footer .menu-footer .info .text ul a i {
+        color: white;
+        font-size: 1rem; }
+  @media (max-width: 991.98px) {
+    footer .menu-footer .info {
+      flex-direction: column; } }
+  footer .menu-footer .menu-1 {
+    padding: 0;
+    list-style: none;
+    margin: 0; }
+    footer .menu-footer .menu-1 li {
+      padding-top: 0.15rem;
+      padding-right: 0;
+      padding-bottom: 0.15rem;
+      padding-left: 0; }
+      footer .menu-footer .menu-1 li a {
+        color: white;
+        font-size: 1rem;
+        opacity: .3; }
 
-header .navbar-brand img {
-  max-height: 2rem; }
-
-@media (min-width: 768px) {
-  header .navbar-brand img {
-    max-height: 3rem; } }
-
-footer {
+footer .coppyright {
   background: #1A1919; }
   footer .coppyright p {
-    color: white; }
+    color: #999999;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 1.1rem; }
 
 .home-slider .owl-carousel .item {
   position: relative; }

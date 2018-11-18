@@ -1,5 +1,54 @@
 footer
-	background: $footer
+	.menu-footer
+		background: $xanh-chung
+		+pad(2rem 0)
+		+media-breakpoint-up(md)
+			+pad(4rem 0)
+		h2 
+			+fz(1.2rem)
+			text-transform: uppercase
+			color: $white
+			+fw(900)
+			margin-bottom: .9rem
+		.info
+			.logo
+				img
+					margin-right: 0
+					+media-breakpoint-up(md)
+						margin-right: 2.8rem
+			.text
+				p 
+					color: white
+					+fz(.95rem)
+					opacity: .3
+				ul 
+					+mar(0)
+					a 
+						display: flex
+						justify-content: center
+						align-items: center
+						width: 2rem
+						height: 2rem
+						text-decoration: none
+						i
+							color: white
+							+fz(1rem)
+			+media-breakpoint-down(md)
+				flex-direction: column
+		.menu-1
+			+pad(0)
+			list-style: none
+			+mar(0)
+			li 
+				+pad(.15rem 0)
+				a
+					color: white
+					+fz(1rem)
+					opacity: .3
 	.coppyright
+		background: $footer
 		p 
-			color: white
+			color: $cl-footer
+			+fw(600)
+			+fz(1rem)
+			+pad(1.1rem)
