@@ -7,8 +7,66 @@ block variables
 
 block body
 	section.about
-		.container
-			.row
-				.col
-					h1.mt-4 About Page
+		section.about-part.section-banner.container-fluid.main-carousel.owl-carousel.owl-theme
+			.item
+				img.img-fluid(src="./img/gioithieu/gioithieu-slider-01.png", alt="ancucorp-banner")
+			.item
+				img.img-fluid(src="./img/gioithieu/gioithieu-slider-02.png", alt="ancucorp-banner")
+		section.about-part.section-introduction.container
+			h2.title About An Cu
+			p An Cu Corporation was established in 1992, mainly operating in the field of construction, including construction execution and consultancy.
+			p With 25 years of experience the team of civil engineers, M&E engineers, professional technical staff and the Corporation’s human resources team have been directly involved in the management of projects, consultancy and construction of many works in the territory of Vietnam, especially key office and apartment projects.
+			p The Corporation boasts a charter capital of VND122 billion and has the financial capacity to orient, plan and meet strong growth targets in the coming time. In the near future, An Cu Construction Corporation will improve its capacity to participate in large projects in order to confirm its position and capacity in the field of consultancy and construction.
+			p With the desire to provide high quality and stable construction products to the market, An Cu Corporation is looking forward to cooperating with its partners and customers to serve them through providing practical and sustainable value.
+			p An Cu Corporation
+			ul.address
+				li Address : 29 TER Nguyen Dinh Chieu, Dakao Ward, District 1, Ho Chi Minh City.
+				li Tel  : 0777 499 887
+				li Fax : 0283 9111812
 
+		section.about-part.section-brochure.container
+			.row.brochure-row
+				.col-3.item
+					.img-box
+						img.img-fluid(src="./img/gioithieu/gioithieu-duan-01.png", alt="")
+				.col-3.item.item-down
+					.img-box
+						img.img-fluid(src="./img/gioithieu/gioithieu-duan-02.png", alt="")
+				.col-3.item
+					.img-box
+						img.img-fluid(src="./img/gioithieu/gioithieu-duan-03.png", alt="")
+				.col-3.item.item-down
+					.img-box
+						img.img-fluid(src="./img/gioithieu/gioithieu-duan-04.png", alt="")
+			button#download-btn Download Brochure
+		section.about-part.section-mainline.container
+			h5.title main lines of business
+			.mainline-content
+				p Designing the architecture for civil and industrial projects. Designing the structure for civil and industrial projects. Designing electrical systems for civil and industrial projects and Interior design.
+
+				p Constructing the industrial and civil projects. Leveling the works. Installing the interior decoration for the works. Trading in the interior decoration items.
+
+				p Installing the equipment of the electrical system, lightning protection system and fire protection system, equipment of water supply and drainage system, substation equipment 300 KV or below.
+
+				p Trading in the equipment of the electrical system, lightning protection system and fire protection system, equipment of water supply and drainage system, substation equipment 300 KV or below.
+
+				p Constructing the railways and roads, repairing the roads and bridges.
+
+				p Wholesaling other materials and installation equipment in the field of construction. Detail: Trading in the construction materials.
+
+				p Trading in the real estate, land use rights owned by the owner, user or renter, trading in house.
+
+				p Repairing the machines and equipment including repair and maintenance of the equipment of the electrical system, lightning protection system and fire protection system, equipment of water supply and drainage system, substation equipment 300 KV or below.
+
+				p Producing, trading in beds, cabinets, tables, chairs. Providing the project interior.
+		section.about-part.section-introduction-video.container-fluid
+			.introduction-video
+				.row.row-bg
+					.col-6.item.item-side
+						img(src="./img/gioithieu/gioithieu-video-bg-01.png", alt="")
+					.col-6.item.item-side
+						img(src="./img/gioithieu/gioithieu-video-bg-02.png", alt="")
+				.video-box
+					img.img-cover-video(src="./img/gioithieu/gioithieu-video-01.png", alt="")
+					//- a.video-link(href="https://www.youtube.com/watch?v=eeg9tnSfFs4&amp;feature=youtu.be" data-fancybox="Video")
+					iframe#video(src="https://www.youtube.com/embed/eeg9tnSfFs4?autoplay=1" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
