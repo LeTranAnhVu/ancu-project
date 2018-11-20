@@ -6351,6 +6351,12 @@ footer img {
 
 .about-part {
   margin-top: 30px; }
+  @media (min-width: 768px) {
+    .about-part {
+      margin-top: 50px; } }
+  @media (min-width: 992px) {
+    .about-part:not(.about-first-part) {
+      margin-top: 80px; } }
 
 .section-banner {
   padding: 0;
@@ -6449,11 +6455,19 @@ footer img {
     .section-mainline p {
       font-size: 1.2rem; } }
 
+.section-introduction-video .slider .slick-list .slick-track {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
 .section-about-leadership .row .item .left-side .title-box,
 .section-about-leadership .row .item .right-side .title-box {
   color: #5780a0;
   text-align: center;
   text-transform: uppercase; }
+  .section-about-leadership .row .item .left-side .title-box i,
+  .section-about-leadership .row .item .right-side .title-box i {
+    font-size: 5rem; }
 
 .section-about-leadership .row .item .left-side .content-box,
 .section-about-leadership .row .item .right-side .content-box {
@@ -6490,5 +6504,110 @@ footer img {
       align-self: center; }
       .section-about-leadership .row .item .center .box {
         width: 70%; } }
+
+.section-about-directors {
+  background: #e1e3e4;
+  padding: 0; }
+  .section-about-directors .row {
+    margin: 0; }
+    .section-about-directors .row [class*='col-'] {
+      padding: 0; }
+    .section-about-directors .row .title-col {
+      background: #5780a0;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .section-about-directors .row .title-col .title-box {
+        padding: 20px; }
+        .section-about-directors .row .title-col .title-box .title {
+          margin: 0;
+          color: white;
+          text-align: right; }
+      @media (min-width: 992px) {
+        .section-about-directors .row .title-col {
+          justify-content: flex-end; } }
+    .section-about-directors .row .slider-col .slider {
+      position: relative; }
+      .section-about-directors .row .slider-col .slider .slick-next,
+      .section-about-directors .row .slider-col .slider .slick-prev {
+        height: auto;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1; }
+      .section-about-directors .row .slider-col .slider .slick-next {
+        right: 1rem; }
+        .section-about-directors .row .slider-col .slider .slick-next:before {
+          color: #5780a0;
+          content: "\f105";
+          font: 40px/1 'FontAwesome'; }
+      .section-about-directors .row .slider-col .slider .slick-prev {
+        left: 1rem; }
+        .section-about-directors .row .slider-col .slider .slick-prev:before {
+          color: #5780a0;
+          content: "\f104";
+          font: 40px/1 'FontAwesome'; }
+      .section-about-directors .row .slider-col .slider .slide:focus {
+        outline: none; }
+      .section-about-directors .row .slider-col .slider .slide .director-info {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center; }
+        .section-about-directors .row .slider-col .slider .slide .director-info .img-col .img-box {
+          margin: auto;
+          width: 100%; }
+          .section-about-directors .row .slider-col .slider .slide .director-info .img-col .img-box img {
+            width: 100%; }
+        .section-about-directors .row .slider-col .slider .slide .director-info .content-col .content-box {
+          padding: 20px; }
+          .section-about-directors .row .slider-col .slider .slide .director-info .content-col .content-box .name,
+          .section-about-directors .row .slider-col .slider .slide .director-info .content-col .content-box .role {
+            color: #5780a0;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-align: center; }
+        @media (min-width: 768px) {
+          .section-about-directors .row .slider-col .slider .slide .director-info {
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-flow: row nowrap; }
+            .section-about-directors .row .slider-col .slider .slide .director-info .img-col {
+              flex-basis: 600px;
+              flex-grow: 1; }
+              .section-about-directors .row .slider-col .slider .slide .director-info .img-col .img-box {
+                width: 100%; }
+            .section-about-directors .row .slider-col .slider .slide .director-info .content-col .content-box .name,
+            .section-about-directors .row .slider-col .slider .slide .director-info .content-col .content-box .role {
+              text-align: left; } }
+        @media (min-width: 992px) {
+          .section-about-directors .row .slider-col .slider .slide .director-info .img-col {
+            flex-basis: 800px; } }
+        @media (min-width: 1200px) {
+          .section-about-directors .row .slider-col .slider .slide .director-info .img-col {
+            flex-basis: 300px; } }
+
+.section-about-end {
+  padding: 0; }
+  .section-about-end .flex-box {
+    margin: 0;
+    display: flex;
+    flex-flow: column-reverse wrap; }
+    .section-about-end .flex-box [class*='col-'] {
+      padding: 0; }
+    .section-about-end .flex-box .item {
+      background: #5780a0;
+      color: white;
+      width: 100%;
+      flex-grow: 1; }
+      .section-about-end .flex-box .item .content-box {
+        padding: 30px; }
+      .section-about-end .flex-box .item.img-box {
+        background: url("../img/gioithieu/gioithieu-hinhanh-01.png") no-repeat center center;
+        background-size: cover;
+        min-height: 400px; }
+    @media (min-width: 992px) {
+      .section-about-end .flex-box {
+        flex-flow: row nowrap; } }
 
 /*# sourceMappingURL=main.css.map */

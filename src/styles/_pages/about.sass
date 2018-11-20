@@ -1,6 +1,11 @@
 
 .about-part
 	margin-top: 30px
+	+media-breakpoint-up(md)
+		margin-top: 50px
+	+media-breakpoint-up(lg)
+		&:not(.about-first-part)
+			margin-top: 80px
 
 .section-banner
 	padding: 0
@@ -94,6 +99,15 @@
 		+media-breakpoint-up(md)
 			font-size: 1.2rem
 
+.section-introduction-video
+	.slider
+		.slick-list
+			.slick-track
+				display: flex
+				justify-content: center
+				align-items: center
+
+
 
 .section-about-leadership
 	.row
@@ -104,6 +118,8 @@
 					color: $mainBlue
 					text-align: center
 					text-transform: uppercase
+					i
+						font-size: 5rem
 				.content-box
 					text-align: center
 			.center
@@ -140,3 +156,112 @@
 						width: 70%
 
 
+.section-about-directors
+	background: $bg
+	padding: 0
+	.row
+		margin: 0
+		[class*='col-']
+			padding: 0
+		.title-col
+			background: $mainBlue
+			display: flex
+			justify-content: center
+			align-items: center
+			.title-box
+				padding: 20px
+				.title
+					margin: 0
+					color: white
+					text-align: right
+			+media-breakpoint-up(lg)
+				justify-content: flex-end
+		.slider-col
+			.slider
+				position: relative
+				.slick-next,
+				.slick-prev
+					height: auto
+					position: absolute
+					top: 50%
+					transform: translateY(-50%)
+					z-index: 1
+				.slick-next
+					right: 1rem
+					&:before
+						color: $mainBlue
+						content: "\f105"
+						font: 40px/1 'FontAwesome'
+				.slick-prev
+					left: 1rem
+					&:before
+						color: $mainBlue
+						content: "\f104"
+						font: 40px/1 'FontAwesome'
+
+				.slide
+					&:focus
+						outline: none
+					.director-info
+						display: flex
+						flex-flow: column wrap
+						align-items: center
+						justify-content: center
+						.img-col
+							.img-box
+								margin: auto
+								width: 100%
+								img
+									width: 100%
+						.content-col
+							.content-box
+								padding: 20px
+								.name,
+								.role
+									color: $mainBlue
+									text-transform: uppercase
+									font-weight: bold
+									text-align: center
+						+media-breakpoint-up(md)
+							align-items: flex-start
+							justify-content: flex-start
+							flex-flow: row nowrap
+							.img-col
+								flex-basis: 600px
+								flex-grow: 1
+								.img-box
+									width: 100%
+							.content-col
+								.content-box
+									.name,
+									.role
+										text-align: left
+						+media-breakpoint-up(lg)
+							.img-col
+								flex-basis: 800px
+						+media-breakpoint-up(xl)
+							.img-col
+								flex-basis: 300px
+
+.section-about-end
+	padding: 0
+	.flex-box
+		margin: 0
+		display: flex
+		flex-flow: column-reverse wrap
+		[class*='col-']
+			padding: 0
+		.item
+			background: $mainBlue
+			color: white
+			width: 100%
+			flex-grow: 1
+			.content-box
+				padding: 30px
+			&.img-box
+				background: url('../img/gioithieu/gioithieu-hinhanh-01.png') no-repeat center center
+				background-size: cover
+				min-height: 400px
+		+media-breakpoint-up(lg)
+			flex-flow: row nowrap
+			.item
