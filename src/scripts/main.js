@@ -1,16 +1,36 @@
 // Main
 $(document).ready(function () {
-	$('.main-carousel').owlCarousel({
-		items: 1
+
+	//
+	$('#about-video-slider').slick({
+		focusOnSelect: true,
+		dots: false,
+		infinite: true,
+		mobileFirst : true,
+		responsive: [{
+			breakpoint: 768,
+			settings: {
+				arrows: true,
+				slidesToShow: 3,
+				centerMode: true,
+			}
+		},
+		{
+			breakpoint: 480,
+			settings: {
+				arrows: false,
+				slidesToShow: 1,
+				centerMode: true,
+				}
+			}
+		]
 	});
-	aboutPlayVideo();
+	// dsfasd
+
+	$('.about-main-carousel').owlCarousel({
+		items: 1,
+		dots: false,
+		nav: true
+	});
+
 });
-
-
-function aboutPlayVideo(){
-	$('.about-part.section-introduction-video .introduction-video .video-box .img-cover-video').on('click',function(){
-		$(this).parents('.video-box').find('#video').css({
-			'height': '100%'
-		})
-	})
-}

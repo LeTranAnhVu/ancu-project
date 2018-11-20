@@ -7,7 +7,7 @@ block variables
 
 block body
 	section.about
-		section.about-part.section-banner.container-fluid.main-carousel.owl-carousel.owl-theme
+		section.about-part.section-banner.container-fluid.about-main-carousel.owl-carousel.owl-theme
 			.item
 				img.img-fluid(src="./img/gioithieu/gioithieu-slider-01.png", alt="ancucorp-banner")
 			.item
@@ -60,13 +60,35 @@ block body
 
 				p Producing, trading in beds, cabinets, tables, chairs. Providing the project interior.
 		section.about-part.section-introduction-video.container-fluid
-			.introduction-video
-				.row.row-bg
-					.col-6.item.item-side
-						img(src="./img/gioithieu/gioithieu-video-bg-01.png", alt="")
-					.col-6.item.item-side
-						img(src="./img/gioithieu/gioithieu-video-bg-02.png", alt="")
-				.video-box
-					img.img-cover-video(src="./img/gioithieu/gioithieu-video-01.png", alt="")
-					//- a.video-link(href="https://www.youtube.com/watch?v=eeg9tnSfFs4&amp;feature=youtu.be" data-fancybox="Video")
-					iframe#video(src="https://www.youtube.com/embed/eeg9tnSfFs4?autoplay=1" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+			#about-video-slider.slider.center
+				.slide
+					.box.side-box
+						img.img-fluid(src="./img/gioithieu/gioithieu-video-bg-01.png", alt="")
+				.slide
+					.box.center-box
+						img.img-fluid(src="./img/gioithieu/gioithieu-video-01.png", alt="")
+				.slide
+					.box.side-box
+						img.img-fluid(src="./img/gioithieu/gioithieu-video-bg-02.png", alt="")
+
+		section.about-part.section-about-leadership.container
+			.row
+				.col-lg-4.item
+					.left-side
+						.title-box
+							i.fa.fa-eye
+							h3 Vision
+						.content-box
+							p Building the Corporation with the professional staff; with the strategic vision and the human resources strong enough to carry out large-scale projects at the regional level, meeting the requirements of safety, technical and art quality in accordance with the regulated standards.
+
+				.col-lg-4.item
+					.center
+						.box
+							img.img-fluid(src="./img/gioithieu/gioithieu-tamnhin-01.png", alt="")
+				.col-lg-4.item
+					.right-side
+						.title-box
+							i.fa.fa-trophy
+							h3 mission
+						.content-box
+							p Building quality systems and meeting the criteria of "right and good execution the first time" to create high quality products and services to satisfy the customer’s demand, strengthening the management thinking to improve actively the employee life and balance the Corporation profit. Bring the highest satisfaction to the requirements of "the best service for the customers – the employee life - the Corporation profit".

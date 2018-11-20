@@ -6325,6 +6325,19 @@ html, body {
 header .navbar {
   padding-right: 0;
   padding-left: 0; }
+  header .navbar .navbar-collapse {
+    margin: 0 -15px; }
+    header .navbar .navbar-collapse .navbar-nav .nav-item {
+      padding: .2rem 1rem;
+      margin-bottom: 1px; }
+      header .navbar .navbar-collapse .navbar-nav .nav-item:hover, header .navbar .navbar-collapse .navbar-nav .nav-item.active {
+        background: #5780a0; }
+        header .navbar .navbar-collapse .navbar-nav .nav-item:hover a, header .navbar .navbar-collapse .navbar-nav .nav-item.active a {
+          color: white; }
+    @media (min-width: 768px) {
+      header .navbar .navbar-collapse .navbar-nav .nav-item {
+        margin-left: 1px;
+        margin-bottom: 0px; } }
 
 header .navbar-brand img {
   max-height: 2rem; }
@@ -6337,18 +6350,55 @@ footer img {
   max-width: 200px; }
 
 .about-part {
-  margin-top: 50px; }
+  margin-top: 30px; }
 
 .section-banner {
   padding: 0;
   margin: 0; }
+  .section-banner .owl-nav .owl-prev,
+  .section-banner .owl-nav .owl-next {
+    background: #5780a0 !important;
+    height: 3rem;
+    width: 3rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    outline: none; }
+    .section-banner .owl-nav .owl-prev span,
+    .section-banner .owl-nav .owl-next span {
+      font-size: 3rem;
+      line-height: 3rem;
+      color: white; }
+  @media (min-width: 768px) {
+    .section-banner .owl-nav {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      margin: 0;
+      transform: translateY(-50%); }
+      .section-banner .owl-nav .owl-prev,
+      .section-banner .owl-nav .owl-next {
+        position: absolute;
+        transform: translateY(-50%);
+        top: 0; }
+      .section-banner .owl-nav .owl-prev {
+        left: 1rem; }
+      .section-banner .owl-nav .owl-next {
+        right: 1rem; } }
 
 .section-introduction .title {
   text-transform: uppercase;
   color: #5780a0;
   text-align: center;
   font-weight: bold;
-  margin-bottom: 50px; }
+  margin-bottom: 20px; }
+
+.section-introduction p {
+  font-size: 1rem; }
+  @media (min-width: 768px) {
+    .section-introduction p {
+      font-size: 1.2rem; } }
 
 .section-brochure .row {
   padding: 0;
@@ -6362,7 +6412,7 @@ footer img {
   margin-top: 40px; }
 
 .section-brochure .brochure-row .item {
-  margin-right: -50px; }
+  margin-right: -20px; }
   .section-brochure .brochure-row .item .img-box {
     background: #dfe4ea;
     padding: 8px; }
@@ -6370,6 +6420,10 @@ footer img {
       width: 100%; }
   .section-brochure .brochure-row .item:last-child {
     margin-right: 0; }
+
+@media (min-width: 992px) {
+  .section-brochure .brochure-row .item {
+    margin-right: -50px; } }
 
 .section-brochure #download-btn {
   text-align: center;
@@ -6386,41 +6440,55 @@ footer img {
 .section-mainline .title {
   text-transform: uppercase;
   text-align: center;
-  margin-bottom: 30px; }
+  margin-bottom: 20px;
+  font-size: 1.5rem; }
 
-.section-introduction-video {
+.section-mainline p {
+  font-size: 1rem; }
+  @media (min-width: 768px) {
+    .section-mainline p {
+      font-size: 1.2rem; } }
+
+.section-about-leadership .row .item .left-side .title-box,
+.section-about-leadership .row .item .right-side .title-box {
+  color: #5780a0;
+  text-align: center;
+  text-transform: uppercase; }
+
+.section-about-leadership .row .item .left-side .content-box,
+.section-about-leadership .row .item .right-side .content-box {
+  text-align: center; }
+
+.section-about-leadership .row .item .center {
   display: flex;
   align-items: center;
-  min-height: 700px;
-  padding: 0; }
-  .section-introduction-video .introduction-video {
-    position: relative;
-    flex-grow: 1; }
-    .section-introduction-video .introduction-video .row {
+  justify-content: center;
+  padding: 50px; }
+  .section-about-leadership .row .item .center .box {
+    width: 50%;
+    transform: rotateZ(45deg); }
+    .section-about-leadership .row .item .center .box img {
+      width: 100%; }
+
+@media (min-width: 768px) {
+  .section-about-leadership .row .item .center .box {
+    width: 40%; } }
+
+@media (min-width: 992px) {
+  .section-about-leadership .row .item {
+    display: flex; }
+    .section-about-leadership .row .item .left-side .title-box,
+    .section-about-leadership .row .item .left-side .content-box {
+      text-align: right; }
+    .section-about-leadership .row .item .right-side .title-box,
+    .section-about-leadership .row .item .right-side .content-box {
+      text-align: left; }
+    .section-about-leadership .row .item .center {
+      display: flex;
       padding: 0;
-      margin: 0; }
-      .section-introduction-video .introduction-video .row [class*='col-'] {
-        padding: 0;
-        margin: 0; }
-        .section-introduction-video .introduction-video .row [class*='col-'] img {
-          width: 100%; }
-    .section-introduction-video .introduction-video .video-box {
-      position: absolute;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      left: 50%; }
-      .section-introduction-video .introduction-video .video-box .video-link {
-        position: absolute;
-        top: 0;
-        left: 0;
-        background: none;
-        width: 100%;
-        height: 100%; }
-      .section-introduction-video .introduction-video .video-box #video {
-        width: 100%;
-        height: 0;
-        position: absolute;
-        top: 0;
-        left: 0; }
+      margin: auto;
+      align-self: center; }
+      .section-about-leadership .row .item .center .box {
+        width: 70%; } }
 
 /*# sourceMappingURL=main.css.map */

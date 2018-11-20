@@ -6,6 +6,9 @@ module.exports = function (gulp, $, browserSync) {
 				// OWL
 				'bower_components/owl.carousel/dist/assets/owl.carousel.min.css',
 				'bower_components/owl.carousel/dist/assets/owl.theme.default.min.css',
+				// slick-carousel
+				'bower_components/slick-carousel/slick/slick.css',
+				'bower_components/slick-carousel/slick/slick-theme.css'
 			])
 			.pipe($.concat('thuvien.css'))
 			.pipe(gulp.dest('./dist/css'));

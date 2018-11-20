@@ -1,16 +1,53 @@
-$mainBlue: #5780a0
+
 .about-part
-	margin-top: 50px
+	margin-top: 30px
+
 .section-banner
 	padding: 0
 	margin: 0
+	.owl-nav
+		.owl-prev,
+		.owl-next
+			background: $mainBlue !important
+			height: 3rem
+			width: 3rem
+			display: inline-flex
+			justify-content: center
+			align-items: center
+			outline: none
+			span
+				+fz(3rem)
+				line-height: 3rem
+				color: white
+		+media-breakpoint-up(md)
+			position: absolute
+			top: 50%
+			left: 0
+			width: 100%
+			margin: 0
+			transform: translateY(-50%)
+			.owl-prev,
+			.owl-next
+				position: absolute
+				transform: translateY(-50%)
+				top: 0
+			.owl-prev
+				left: 1rem
+			.owl-next
+				right: 1rem
+
+
 .section-introduction
 	.title
 		text-transform: uppercase
 		color: $mainBlue
 		text-align: center
 		font-weight: bold
-		margin-bottom: 50px
+		margin-bottom: 20px
+	p
+		font-size: 1rem
+		+media-breakpoint-up(md)
+			font-size: 1.2rem
 .section-brochure
 	.row
 		padding: 0
@@ -23,7 +60,7 @@ $mainBlue: #5780a0
 		.item-down
 			margin-top: 40px
 		.item
-			margin-right: -50px 
+			margin-right: -20px 
 			.img-box
 				background: #dfe4ea
 				padding: 8px
@@ -31,6 +68,9 @@ $mainBlue: #5780a0
 					width: 100%
 			&:last-child
 				margin-right: 0
+		+media-breakpoint-up(lg)
+			.item
+				margin-right: -50px
 	#download-btn
 		text-align: center
 		color: white
@@ -47,40 +87,56 @@ $mainBlue: #5780a0
 	.title
 		text-transform: uppercase
 		text-align: center
-		margin-bottom: 30px
+		margin-bottom: 20px
+		font-size: 1.5rem
+	p
+		font-size: 1rem
+		+media-breakpoint-up(md)
+			font-size: 1.2rem
 
-.section-introduction-video
-	display: flex
-	align-items: center
-	min-height: 700px
-	padding: 0
-	.introduction-video
-		position: relative
-		flex-grow: 1
-		.row
-			padding: 0
-			margin: 0
-			[class*='col-']
-				padding: 0
-				margin: 0
-				img
-					width: 100%
-		.video-box
-			position: absolute
-			top: 50%
-			transform: translate(-50%, -50%)
-			left: 50%
-			.img-cover-video
-			.video-link
-				position: absolute
-				top: 0
-				left: 0
-				background: none
-				width: 100%
-				height: 100%
-			#video
-				width: 100%
-				height: 0
-				position: absolute
-				top: 0
-				left: 0
+
+.section-about-leadership
+	.row
+		.item
+			.left-side,
+			.right-side,
+				.title-box
+					color: $mainBlue
+					text-align: center
+					text-transform: uppercase
+				.content-box
+					text-align: center
+			.center
+				display: flex
+				align-items: center
+				justify-content: center
+				padding: 50px
+				.box
+					width: 50%
+					transform: rotateZ(45deg)
+					img
+						width: 100%
+			+media-breakpoint-up(md)
+				.center
+					.box
+						width: 40%
+			+media-breakpoint-up(lg)
+				display: flex
+				.left-side
+					.title-box,
+					.content-box
+						text-align: right
+				.right-side
+					.title-box,
+					.content-box
+						text-align: left
+				.center
+					display: flex
+					padding: 0
+					margin: auto
+					align-self: center
+					// margin: auto
+					.box
+						width: 70%
+
+

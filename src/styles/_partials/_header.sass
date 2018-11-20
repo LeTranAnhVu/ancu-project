@@ -1,6 +1,22 @@
 header
 	.navbar
 		+pad(null 0)
+		.navbar-collapse
+			margin: 0 -15px
+			.navbar-nav
+				.nav-item
+					padding: .2rem 1rem
+					margin-bottom: 1px
+					&:hover,
+					&.active
+						background: $mainBlue
+						a
+							color: white
+				+media-breakpoint-up(md)
+					.nav-item
+						margin-left: 1px
+						margin-bottom: 0px
+
 	.navbar-brand
 		img 
 			max-height: 2rem

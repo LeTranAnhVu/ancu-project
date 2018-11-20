@@ -6,6 +6,8 @@ module.exports = function (gulp, $, browserSync) {
 				'bower_components/bootstrap/dist/js/bootstrap.min.js',
 				// Phần Plugins
 				'bower_components/owl.carousel/dist/owl.carousel.min.js',
+				// slick carousel
+				'bower_components/slick-carousel/slick/slick.min.js'
 			])
 			.pipe($.concat('thuvien.js'))
 			.pipe(gulp.dest('./dist/js'));
