@@ -1,26 +1,120 @@
-header
-	.navbar
-		+pad(null 0)
-		.navbar-collapse
-			margin: 0 -15px
-			.navbar-nav
-				.nav-item
-					padding: .2rem 1rem
-					margin-bottom: 1px
-					&:hover,
-					&.active
-						background: $mainBlue
-						a
-							color: white
-				+media-breakpoint-up(md)
-					.nav-item
-						margin-left: 1px
-						margin-bottom: 0px
 
-	.navbar-brand
-		img 
-			max-height: 2rem
-	+media-breakpoint-up(md)
-		.navbar-brand
-			img 
-				max-height: 3rem
+// .navbar
+// 	+pad(null 0)
+// 	.navbar-collapse
+// 		margin: 0 -15px
+// 		.navbar-nav
+// 			.nav-item
+// 				padding: .2rem 1rem
+// 				margin-bottom: 1px
+// 				&:hover,
+// 				&.active
+// 					background: $mainBlue
+// 					a
+// 						color: white
+// 			+media-breakpoint-up(md)
+// 				.nav-item
+// 					margin-left: 1px
+// 					margin-bottom: 0px
+
+// .navbar-brand
+// 	img 
+// 		max-height: 2rem
+// +media-breakpoint-up(md)
+// 	.navbar-brand
+// 		img 
+// 			max-height: 3rem
+
+ul
+	padding: 0
+	list-style: none
+	margin: 0
+	li
+		a
+			&:hover
+				text-decoration: none
+header
+	.custom-navbar
+		// opacity: .5
+		position: fixed
+		top: 0
+		left: 0
+		z-index: 500
+		width: 100%
+		z-index: 500
+		background: #29506fa3
+		width: 100%
+		.inner-custom-navbar
+			// background: r
+			display: flex
+			flex-flow: row nowrap
+			align-items: center
+			justify-content: center
+			position: initial
+			.custom-navbar-brand
+				padding: 10px 0
+				.custom-brand-link
+					width: 30%
+					display: block
+					img
+						width: 100%
+			.custom-language
+				.languages
+					display: flex
+					.item
+						padding: 5px
+						
+			.custom-navbar-collapse
+				flex-grow: 1
+				position: static
+				.custom-nav
+					display: none
+					.custom-nav-item
+						padding: 20px 30px
+						.custom-nav-link
+							color: white
+					&.active
+						display: block
+						position: absolute
+						top: 0
+						right: 0
+						background: $mainBlue
+						height: 100vh
+						width: 100vw
+						.dummy-brand-space
+							display: none
+		+media-breakpoint-up(md)
+			.inner-custom-navbar
+				.custom-navbar-brand
+					padding: 10px 0
+					.custom-brand-link
+						width: 40%
+				
+		+media-breakpoint-up(lg)
+			.inner-custom-navbar
+				.custom-navbar-brand
+					display: none
+				.custom-language
+					.languages
+						.item
+							padding: 5px
+				.custom-navbar-collapse
+					.custom-nav
+						display: flex
+						flex-flow: row wrap
+						align-items: center
+						justify-content: center
+						.dummy-brand-space
+							width: 80px
+						.custom-nav-item
+							padding: 10px 15px
+				.custom-navbar-hamburger
+					display: none
+		+media-breakpoint-up(xl)
+			.inner-custom-navbar
+				.custom-navbar-collapse
+					.custom-nav
+						.dummy-brand-space
+							width: 100px
+						.custom-nav-item
+							padding: 20px 30px

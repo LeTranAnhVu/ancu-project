@@ -55,6 +55,8 @@ $(document).ready(function () {
 	})
 
 	customSlickSliderDummyBtn();
+	customNavbarHamburger();
+	sizeWindowDetect();
 
 });
 
@@ -66,4 +68,24 @@ function customSlickSliderDummyBtn(){
 	$('.btn-next').on('click',function(){
 		$(this).parents('.custom-slick-slider').find('.slider').find('.slick-next').trigger('click');
 	});
+}
+
+
+
+function customNavbarHamburger(){
+	$('#cus-hamgurger').on('click',function(){
+		$(this).parents('.inner-custom-navbar').find('.custom-navbar-collapse .custom-nav').toggleClass('active');
+	})
+}
+function toggleActiveCustomCollapseNav(){
+	
+}
+
+function sizeWindowDetect(){
+	$(window).resize(()=> {
+		let width = window.innerWidth;
+		if(width > 992){
+			$('#cus-hamgurger').parents('.inner-custom-navbar').find('.custom-navbar-collapse .custom-nav').removeClass('active');
+		}	
+	})
 }

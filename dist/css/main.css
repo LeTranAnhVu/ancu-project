@@ -6322,29 +6322,84 @@ html, body {
   .container {
     width: auto; } }
 
-header .navbar {
-  padding-right: 0;
-  padding-left: 0; }
-  header .navbar .navbar-collapse {
-    margin: 0 -15px; }
-    header .navbar .navbar-collapse .navbar-nav .nav-item {
-      padding: .2rem 1rem;
-      margin-bottom: 1px; }
-      header .navbar .navbar-collapse .navbar-nav .nav-item:hover, header .navbar .navbar-collapse .navbar-nav .nav-item.active {
-        background: #5780a0; }
-        header .navbar .navbar-collapse .navbar-nav .nav-item:hover a, header .navbar .navbar-collapse .navbar-nav .nav-item.active a {
-          color: white; }
-    @media (min-width: 768px) {
-      header .navbar .navbar-collapse .navbar-nav .nav-item {
-        margin-left: 1px;
-        margin-bottom: 0px; } }
+ul {
+  padding: 0;
+  list-style: none;
+  margin: 0; }
+  ul li a:hover {
+    text-decoration: none; }
 
-header .navbar-brand img {
-  max-height: 2rem; }
-
-@media (min-width: 768px) {
-  header .navbar-brand img {
-    max-height: 3rem; } }
+header .custom-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 500;
+  width: 100%;
+  z-index: 500;
+  background: #29506fa3;
+  width: 100%; }
+  header .custom-navbar .inner-custom-navbar {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    position: initial; }
+    header .custom-navbar .inner-custom-navbar .custom-navbar-brand {
+      padding: 10px 0; }
+      header .custom-navbar .inner-custom-navbar .custom-navbar-brand .custom-brand-link {
+        width: 30%;
+        display: block; }
+        header .custom-navbar .inner-custom-navbar .custom-navbar-brand .custom-brand-link img {
+          width: 100%; }
+    header .custom-navbar .inner-custom-navbar .custom-language .languages {
+      display: flex; }
+      header .custom-navbar .inner-custom-navbar .custom-language .languages .item {
+        padding: 5px; }
+    header .custom-navbar .inner-custom-navbar .custom-navbar-collapse {
+      flex-grow: 1;
+      position: static; }
+      header .custom-navbar .inner-custom-navbar .custom-navbar-collapse .custom-nav {
+        display: none; }
+        header .custom-navbar .inner-custom-navbar .custom-navbar-collapse .custom-nav .custom-nav-item {
+          padding: 20px 30px; }
+          header .custom-navbar .inner-custom-navbar .custom-navbar-collapse .custom-nav .custom-nav-item .custom-nav-link {
+            color: white; }
+        header .custom-navbar .inner-custom-navbar .custom-navbar-collapse .custom-nav.active {
+          display: block;
+          position: absolute;
+          top: 0;
+          right: 0;
+          background: #5780a0;
+          height: 100vh;
+          width: 100vw; }
+          header .custom-navbar .inner-custom-navbar .custom-navbar-collapse .custom-nav.active .dummy-brand-space {
+            display: none; }
+  @media (min-width: 768px) {
+    header .custom-navbar .inner-custom-navbar .custom-navbar-brand {
+      padding: 10px 0; }
+      header .custom-navbar .inner-custom-navbar .custom-navbar-brand .custom-brand-link {
+        width: 40%; } }
+  @media (min-width: 992px) {
+    header .custom-navbar .inner-custom-navbar .custom-navbar-brand {
+      display: none; }
+    header .custom-navbar .inner-custom-navbar .custom-language .languages .item {
+      padding: 5px; }
+    header .custom-navbar .inner-custom-navbar .custom-navbar-collapse .custom-nav {
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+      justify-content: center; }
+      header .custom-navbar .inner-custom-navbar .custom-navbar-collapse .custom-nav .dummy-brand-space {
+        width: 80px; }
+      header .custom-navbar .inner-custom-navbar .custom-navbar-collapse .custom-nav .custom-nav-item {
+        padding: 10px 15px; }
+    header .custom-navbar .inner-custom-navbar .custom-navbar-hamburger {
+      display: none; } }
+  @media (min-width: 1200px) {
+    header .custom-navbar .inner-custom-navbar .custom-navbar-collapse .custom-nav .dummy-brand-space {
+      width: 100px; }
+    header .custom-navbar .inner-custom-navbar .custom-navbar-collapse .custom-nav .custom-nav-item {
+      padding: 20px 30px; } }
 
 footer img {
   max-width: 200px; }
