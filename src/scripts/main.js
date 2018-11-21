@@ -44,10 +44,26 @@ $(document).ready(function () {
 	});
 	// dsfasd
 
-	$('.about-main-carousel').owlCarousel({
-		items: 1,
-		dots: false,
-		nav: true
-	});
+	// $('.about-main-carousel').owlCarousel({
+	// 	items: 1,
+	// 	dots: false,
+	// 	nav: true
+	// });
+	$('.about-main-carousel').slick({
+		slidesToShow: 1,
+		arrows: true
+	})
+
+	customSlickSliderDummyBtn();
 
 });
+
+
+function customSlickSliderDummyBtn(){
+	$('.btn-prev').on('click',function(){
+		$(this).parents('.custom-slick-slider').find('.slider').find('.slick-prev').trigger('click');
+	});
+	$('.btn-next').on('click',function(){
+		$(this).parents('.custom-slick-slider').find('.slider').find('.slick-next').trigger('click');
+	});
+}

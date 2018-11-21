@@ -6359,39 +6359,57 @@ footer img {
       margin-top: 80px; } }
 
 .section-banner {
-  padding: 0;
-  margin: 0; }
-  .section-banner .owl-nav .owl-prev,
-  .section-banner .owl-nav .owl-next {
-    background: #5780a0 !important;
-    height: 3rem;
-    width: 3rem;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    outline: none; }
-    .section-banner .owl-nav .owl-prev span,
-    .section-banner .owl-nav .owl-next span {
-      font-size: 3rem;
-      line-height: 3rem;
-      color: white; }
-  @media (min-width: 768px) {
-    .section-banner .owl-nav {
+  padding: 0; }
+  .section-banner .about-next-prev-bar {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center; }
+    .section-banner .about-next-prev-bar button {
+      margin: 0 10px;
+      background: none;
+      border: none;
+      background: #5780a0;
+      color: white;
+      font-size: 1.5rem;
+      padding: 0 10px; }
+  .section-banner .slider {
+    position: relative; }
+    .section-banner .slider .item img {
+      width: 100%; }
+    .section-banner .slider .slick-next,
+    .section-banner .slider .slick-prev {
+      height: auto;
       position: absolute;
       top: 50%;
-      left: 0;
-      width: 100%;
-      margin: 0;
-      transform: translateY(-50%); }
-      .section-banner .owl-nav .owl-prev,
-      .section-banner .owl-nav .owl-next {
-        position: absolute;
-        transform: translateY(-50%);
-        top: 0; }
-      .section-banner .owl-nav .owl-prev {
-        left: 1rem; }
-      .section-banner .owl-nav .owl-next {
-        right: 1rem; } }
+      transform: translateY(-50%);
+      z-index: 1;
+      opacity: 0; }
+    .section-banner .slider .slick-next {
+      right: 1rem; }
+      .section-banner .slider .slick-next:before {
+        color: #5780a0;
+        content: "\f105";
+        font: 40px/1 'FontAwesome'; }
+    .section-banner .slider .slick-prev {
+      left: 1rem; }
+      .section-banner .slider .slick-prev:before {
+        color: #5780a0;
+        content: "\f104";
+        font: 40px/1 'FontAwesome'; }
+  @media (min-width: 992px) {
+    .section-banner .slider .slick-next,
+    .section-banner .slider .slick-prev {
+      height: auto;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1;
+      opacity: 0.4; }
+    .section-banner .slider:hover .slick-next,
+    .section-banner .slider:hover .slick-prev {
+      opacity: 1; }
+    .section-banner .about-next-prev-bar {
+      display: none; } }
 
 .section-introduction .title {
   text-transform: uppercase;
@@ -6415,19 +6433,21 @@ footer img {
     margin: 0; }
 
 .section-brochure .brochure-row .item-down {
-  margin-top: 40px; }
+  margin-top: 20px; }
 
 .section-brochure .brochure-row .item {
   margin-right: -20px; }
   .section-brochure .brochure-row .item .img-box {
     background: #dfe4ea;
-    padding: 8px; }
+    padding: 5px; }
     .section-brochure .brochure-row .item .img-box img {
       width: 100%; }
   .section-brochure .brochure-row .item:last-child {
     margin-right: 0; }
 
 @media (min-width: 992px) {
+  .section-brochure .brochure-row .item-down {
+    margin-top: 50px; }
   .section-brochure .brochure-row .item {
     margin-right: -50px; } }
 
@@ -6436,12 +6456,17 @@ footer img {
   color: white;
   background: #5780a0;
   border: none;
-  padding: 5px 15px;
+  padding: 5px 10px;
   margin: auto;
   display: block;
-  margin-top: 30px;
-  font-size: 1.2rem;
+  margin-top: 10px;
+  font-size: 1rem;
   cursor: pointer; }
+  @media (min-width: 992px) {
+    .section-brochure #download-btn {
+      font-size: 1.2rem;
+      padding: 5px 20px;
+      margin-top: 30px; } }
 
 .section-mainline .title {
   text-transform: uppercase;
@@ -6480,9 +6505,30 @@ footer img {
   padding: 50px; }
   .section-about-leadership .row .item .center .box {
     width: 50%;
-    transform: rotateZ(45deg); }
+    transform: rotateZ(45deg);
+    position: relative; }
     .section-about-leadership .row .item .center .box img {
       width: 100%; }
+    .section-about-leadership .row .item .center .box .wave-circle,
+    .section-about-leadership .row .item .center .box .wave-circle-1,
+    .section-about-leadership .row .item .center .box .wave-circle-2 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      display: block; }
+    .section-about-leadership .row .item .center .box .wave-circle {
+      animation: water-drop-spread 6s ease-in infinite;
+      -webkit-animation: water-drop-spread 6s ease-in infinite; }
+    .section-about-leadership .row .item .center .box .wave-circle-1 {
+      animation: water-drop-spread 6s ease-in 2s infinite;
+      -webkit-animation: water-drop-spread 6s ease-in 2s infinite; }
+    .section-about-leadership .row .item .center .box .wave-circle-2 {
+      animation: water-drop-spread 6s ease-in 4s infinite;
+      -webkit-animation: water-drop-spread 6s ease-in 4s infinite; }
 
 @media (min-width: 768px) {
   .section-about-leadership .row .item .center .box {
@@ -6504,6 +6550,31 @@ footer img {
       align-self: center; }
       .section-about-leadership .row .item .center .box {
         width: 70%; } }
+
+@keyframes water-drop-spread {
+  0% {
+    border: 1.5px #334b5e solid;
+    width: 30px;
+    height: 30px;
+    opacity: 1; }
+  100% {
+    border: 0.1px #45667f solid;
+    width: 180px;
+    height: 180px;
+    opacity: 0; } }
+
+@media (min-width: 768px) {
+  @keyframes water-drop-spread {
+    0% {
+      border: 1.5px #334b5e solid;
+      width: 30px;
+      height: 30px;
+      opacity: 1; }
+    100% {
+      border: 0.1px #45667f solid;
+      width: 300px;
+      height: 300px;
+      opacity: 0; } } }
 
 .section-about-directors {
   background: #e1e3e4;
@@ -6602,10 +6673,13 @@ footer img {
       flex-grow: 1; }
       .section-about-end .flex-box .item .content-box {
         padding: 30px; }
-      .section-about-end .flex-box .item.img-box {
-        background: url("../img/gioithieu/gioithieu-hinhanh-01.png") no-repeat center center;
-        background-size: cover;
-        min-height: 400px; }
+    .section-about-end .flex-box .img-box {
+      background: url("../img/gioithieu/gioithieu-hinhanh-01.png") no-repeat center center;
+      background-size: cover;
+      min-height: 200px; }
+    @media (min-width: 768px) {
+      .section-about-end .flex-box .img-box {
+        min-height: 400px; } }
     @media (min-width: 992px) {
       .section-about-end .flex-box {
         flex-flow: row nowrap; } }

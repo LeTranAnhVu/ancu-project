@@ -1,4 +1,8 @@
 
+=wave-effect($ani)
+	animation: $ani
+	-webkit-animation: $ani
+
 .about-part
 	margin-top: 30px
 	+media-breakpoint-up(md)
@@ -9,37 +13,61 @@
 
 .section-banner
 	padding: 0
-	margin: 0
-	.owl-nav
-		.owl-prev,
-		.owl-next
-			background: $mainBlue !important
-			height: 3rem
-			width: 3rem
-			display: inline-flex
-			justify-content: center
-			align-items: center
-			outline: none
-			span
-				+fz(3rem)
-				line-height: 3rem
-				color: white
-		+media-breakpoint-up(md)
+	.about-next-prev-bar
+		margin-top: 10px
+		display: flex
+		justify-content: center
+		button
+			margin: 0 10px
+			background: none
+			border: none
+			background: $mainBlue
+			color: white
+			font-size: 1.5rem
+			padding: 0 10px
+	.slider
+		position: relative
+		.item
+			img
+				width: 100%
+		.slick-next,
+		.slick-prev
+			height: auto
 			position: absolute
 			top: 50%
-			left: 0
-			width: 100%
-			margin: 0
 			transform: translateY(-50%)
-			.owl-prev,
-			.owl-next
+			z-index: 1
+			opacity: 0
+		.slick-next
+			right: 1rem
+			&:before
+				color: $mainBlue
+				content: "\f105"
+				font: 40px/1 'FontAwesome'
+		.slick-prev
+			left: 1rem
+			&:before
+				color: $mainBlue
+				content: "\f104"
+				font: 40px/1 'FontAwesome'
+	+media-breakpoint-up(lg)
+		.slider
+			.slick-next,
+			.slick-prev
+				height: auto
 				position: absolute
+				top: 50%
 				transform: translateY(-50%)
-				top: 0
-			.owl-prev
-				left: 1rem
-			.owl-next
-				right: 1rem
+				z-index: 1
+				opacity: 0.4
+			&:hover
+				.slick-next,
+				.slick-prev
+					opacity: 1
+		.about-next-prev-bar
+			display: none
+	
+
 
 
 .section-introduction
@@ -63,17 +91,19 @@
 			margin: 0
 	.brochure-row
 		.item-down
-			margin-top: 40px
+			margin-top: 20px
 		.item
 			margin-right: -20px 
 			.img-box
 				background: #dfe4ea
-				padding: 8px
+				padding: 5px
 				img
 					width: 100%
 			&:last-child
 				margin-right: 0
 		+media-breakpoint-up(lg)
+			.item-down
+				margin-top: 50px
 			.item
 				margin-right: -50px
 	#download-btn
@@ -81,12 +111,16 @@
 		color: white
 		background: $mainBlue
 		border: none
-		padding: 5px 15px
+		padding: 5px 10px
 		margin: auto
 		display: block
-		margin-top: 30px
-		font-size: 1.2rem
+		margin-top: 10px
+		font-size: 1rem
 		cursor: pointer
+		+media-breakpoint-up(lg)
+			font-size: 1.2rem
+			padding: 5px 20px
+			margin-top: 30px
 
 .section-mainline
 	.title
@@ -130,8 +164,27 @@
 				.box
 					width: 50%
 					transform: rotateZ(45deg)
+					position: relative
 					img
 						width: 100%
+					.wave-circle,
+					.wave-circle-1,
+					.wave-circle-2
+						position: absolute
+						top: 50%
+						left: 50%
+						transform: translate(-50%, -50%)
+						// background: red
+						width: 25px
+						height: 25px
+						border-radius: 50%
+						display: block
+					.wave-circle
+						+wave-effect(water-drop-spread 6s ease-in infinite)
+					.wave-circle-1
+						+wave-effect(water-drop-spread 6s ease-in 2s infinite)
+					.wave-circle-2
+						+wave-effect(water-drop-spread 6s ease-in 4s infinite)
 			+media-breakpoint-up(md)
 				.center
 					.box
@@ -156,6 +209,30 @@
 						width: 70%
 
 
+@keyframes water-drop-spread
+	0% 
+		border: 1.5px darken($mainBlue,20%) solid
+		width: 30px
+		height: 30px
+		opacity: 1
+	100% 
+		border: .1px darken($mainBlue,10%) solid
+		width: 180px
+		height: 180px
+		opacity: 0
++media-breakpoint-up(md)
+	@keyframes water-drop-spread
+		0% 
+			border: 1.5px darken($mainBlue,20%) solid
+			width: 30px
+			height: 30px
+			opacity: 1
+		100% 
+			border: .1px darken($mainBlue,10%) solid
+			width: 300px
+			height: 300px
+			opacity: 0
+		
 .section-about-directors
 	background: $bg
 	padding: 0
@@ -258,10 +335,17 @@
 			flex-grow: 1
 			.content-box
 				padding: 30px
-			&.img-box
-				background: url('../img/gioithieu/gioithieu-hinhanh-01.png') no-repeat center center
-				background-size: cover
+		.img-box
+			background: url('../img/gioithieu/gioithieu-hinhanh-01.png') no-repeat center center
+			background-size: cover
+			min-height: 200px
+		+media-breakpoint-up(md)
+			.img-box
 				min-height: 400px
 		+media-breakpoint-up(lg)
 			flex-flow: row nowrap
 			.item
+
+
+
+

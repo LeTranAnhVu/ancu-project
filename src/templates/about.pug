@@ -7,11 +7,21 @@ block variables
 
 block body
 	section.about
-		section.about-part.section-banner.container-fluid.about-main-carousel.owl-carousel.owl-theme
-			.item
-				img.img-fluid(src="./img/gioithieu/gioithieu-slider-01.png", alt="ancucorp-banner")
-			.item
-				img.img-fluid(src="./img/gioithieu/gioithieu-slider-02.png", alt="ancucorp-banner")
+		section.section-banner.container-fluid.custom-slick-slider
+			.slider.about-main-carousel
+				.slide.item
+					img.img-fluid(src="./img/gioithieu/gioithieu-slider-01.png", alt="ancucorp-banner")
+				.slide.item
+					img.img-fluid(src="./img/gioithieu/gioithieu-slider-02.png", alt="ancucorp-banner")
+				.slide.item
+					img.img-fluid(src="./img/gioithieu/gioithieu-slider-01.png", alt="ancucorp-banner")
+				.slide.item
+					img.img-fluid(src="./img/gioithieu/gioithieu-slider-02.png", alt="ancucorp-banner")
+			.about-next-prev-bar
+				button.btn-prev
+					i.fa.fa-angle-left
+				button.btn-next
+					i.fa.fa-angle-right
 		section.about-part.about-first-part.section-introduction.container
 			h2.title About An Cu
 			p An Cu Corporation was established in 1992, mainly operating in the field of construction, including construction execution and consultancy.
@@ -85,6 +95,9 @@ block body
 					.center
 						.box
 							img.img-fluid(src="./img/gioithieu/gioithieu-tamnhin-01.png", alt="")
+							.wave-circle
+							.wave-circle-1
+							.wave-circle-2
 				.col-lg-4.item
 					.right-side
 						.title-box
@@ -128,7 +141,7 @@ block body
 
 		section.about-part.section-about-end.container-fluid
 			.flex-box
-				.item.img-box fsdfa
+				.item.img-box
 				.item
 					.content-box
 						p In order to meet the increasing demands of our society An Cu Construction Corporation always considers the supply of quality products and services to satisfy the customer’s maximum demand and continuously improves the position of An Cu Construction Corporation in the field of consultancy and construction.
