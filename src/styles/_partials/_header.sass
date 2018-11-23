@@ -1,13 +1,14 @@
 
+header
+	ul
+		padding: 0
+		list-style: none
+		margin: 0
+		li
+			a
+				&:hover
+					text-decoration: none
 
-ul
-	padding: 0
-	list-style: none
-	margin: 0
-	li
-		a
-			&:hover
-				text-decoration: none
 header
 	.custom-navbar
 		// opacity: .5
@@ -21,7 +22,7 @@ header
 		transition: all .4s ease-in-out
 		&.solid-header
 			padding: 0px
-			background: #29506f
+			background: $strongBlue
 		.inner-custom-navbar
 			display: flex
 			flex-flow: row nowrap
